@@ -5,7 +5,9 @@ services:
     deploy:
       replicas: 10
     volumes:
-      - /var/run/docker.sock
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
     environment:
       - AZP_URL=https://dev.azure.com/angr
       - AZP_TOKEN
