@@ -8,4 +8,4 @@ services:
       - /var/run/docker.sock
     environment:
       - AZP_URL=https://dev.azure.com/angr
-      - AZP_TOEKN
+      - AZP_TOKEN
