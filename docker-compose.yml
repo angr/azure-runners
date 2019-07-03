@@ -1,0 +1,12 @@
+version: "3"
+services:
+  runner:
+    azure-runner:
+      image: angr/azure-runner
+      deploy:
+        replicas: 10
+      volumes:
+        - /var/run/docker.sock
+      environment:
+        - AZP_URL=https://dev.azure.com/angr
+        - AZP_TOEKN
